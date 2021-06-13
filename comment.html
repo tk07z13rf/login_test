@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>shop comment</title>
+
+</head>
+<body>
+	<h1>口コミ投稿にご協力お願いします。</h1>
+
+	<form method="post" th:action="|/mypage/comment/thankyou/${num}|">
+		<p>
+			評価<font color="red"><sup>*</sup></font> <br> <select name="eval"
+				required>
+				<option value="">選択してください</option>
+				<option value="1">1. とても良くなかった</option>
+				<option value="2">2. 良くなかった</option>
+				<option value="3">3. 普通</option>
+				<option value="4">4. 良かった</option>
+				<option value="5">5. とても良かった</option>
+			</select>
+		</p>
+
+		<p>
+			口コミ<font color="red"><sup>*</sup></font><br> <input type="text"
+				name="comment" required />
+		</p>
+
+		<p>
+			<input type="submit" value="送信する">
+		</p>
+
+	</form>
+
+	<p>
+		<a th:href="@{/}" th:text="ホームに戻る"></a>
+	</p>
+</body>
+</html>

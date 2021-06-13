@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Thank you</title>
+</head>
+<body>
+	<h1>口コミ投稿ありがとうございました！</h1>
+	<p th:text="クーポンをGETしました！"></p>
+	<p th:text="${eval}"></p>
+	<p th:text="${comment}"></p>
+
+	<p>
+		<a th:href="@{/}" th:text="ホームに戻る"></a>
+	</p>
+</body>
+</html>
